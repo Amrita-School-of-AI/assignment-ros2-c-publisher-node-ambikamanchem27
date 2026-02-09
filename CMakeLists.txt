@@ -10,7 +10,11 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
 add_executable(publisher_node src/publisher_node.cpp)
-ament_target_dependencies(publisher_node rclcpp std_msgs)
+
+ament_target_dependencies(publisher_node
+  rclcpp
+  std_msgs
+)
 
 install(TARGETS
   publisher_node
